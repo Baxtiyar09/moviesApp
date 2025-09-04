@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901037756571",
+    "project_id": "atlmovaapp",
+    "storage_bucket": "atlmovaapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901037756571:android:c1c2622282c9bf2c21363e",
+        "android_client_info": {
+          "package_name": "com.example.atlmovaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnONXDOFD8NWIKQiuT_JmJl9OD0shtE_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="detail"
+            type="com.example.atlmovaapp.model.detail.MovieDetailResponse" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191818"
+    tools:context=".screen.detail.DetailFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/flimCity"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="1dp"
+        android:text="United States"
+        android:textColor="@color/red"
+        app:backgroundTint="#191818"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/flimYas"
+        app:layout_constraintStart_toEndOf="@+id/flimYas"
+        app:layout_constraintTop_toTopOf="@+id/flimYas"
+        app:strokeColor="@color/red"
+        app:strokeWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/detailFilmImage"
+        load_image_resource="@{detail.backdropPath}"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/flimName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@{detail.title}"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/kaydIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailFilmImage" />
+
+    <ImageView
+        android:id="@+id/kaydIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/movakaydicon"
+        app:layout_constraintBottom_toBottomOf="@+id/flimName"
+        app:layout_constraintEnd_toStartOf="@+id/paylasimIcon"
+        app:layout_constraintTop_toTopOf="@+id/flimName" />
+
+    <ImageView
+        android:id="@+id/paylasimIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/movapaylasimicon"
+        app:layout_constraintBottom_toBottomOf="@+id/kaydIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kaydIcon"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ratingUlduzIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/movaratingulduzicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flimName" />
+
+    <TextView
+        android:id="@+id/flimRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:maxLength="3"
+        android:text="@{detail.voteAverage.toString()}"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingUlduzIcon"
+        app:layout_constraintStart_toEndOf="@+id/ratingUlduzIcon"
+        app:layout_constraintTop_toTopOf="@+id/ratingUlduzIcon" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="15sp"
+        android:layout_height="15sp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/movakecidiconred"
+        app:layout_constraintBottom_toBottomOf="@+id/flimRating"
+        app:layout_constraintStart_toEndOf="@+id/flimRating"
+        app:layout_constraintTop_toTopOf="@+id/flimRating" />
+
+    <TextView
+        android:id="@+id/filmTarixi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:maxLength="4"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="@{detail.releaseDate}"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/flimYas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:text="13+"
+        android:textColor="@color/red"
+        app:backgroundTint="#191818"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/filmTarixi"
+        app:layout_constraintStart_toEndOf="@+id/filmTarixi"
+        app:layout_constraintTop_toTopOf="@+id/filmTarixi"
+        app:strokeColor="@color/red"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/red"
+        android:paddingLeft="55dp"
+        android:text="Play"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:icon="@drawable/movaplayicon"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toStartOf="@+id/downloadButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flimYas" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/downloadButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#191818"
+        android:paddingLeft="40dp"
+        android:text="Download"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:icon="@drawable/movadownloadicon"
+        app:iconTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/playButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playButton"
+        app:layout_constraintTop_toTopOf="@+id/playButton"
+        app:strokeColor="@color/red"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/filmOverview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:text="@{detail.overview}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Credits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filmOverview" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#191818"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_Credits"
+        app:tabIndicatorColor="@color/red"
+        app:tabSelectedTextColor="@color/red">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trailers" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Like This" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Trailers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_MoreLikeThis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:spanCount="2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

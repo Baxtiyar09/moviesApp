@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".screen.welcomeLogin.WelcomeLoginFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInAppleButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="80dp"
+        android:text="Continue with Facebook"
+        android:textAlignment="viewStart"
+        android:textSize="15sp"
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/applelogo"
+        app:iconSize="30sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInGoogleButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInGoogleButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="80dp"
+        android:text="Continue with Facebook"
+        android:textAlignment="viewStart"
+        android:textSize="15sp"
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/googleicon"
+        app:iconSize="30sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInFacebookButton" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/welcomeloginimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/textLetsYouIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/urbanist_semibold"
+        android:text="Let’s you in"
+        android:textAlignment="center"
+        android:textColor="#FBFAFA"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInFacebookButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="80dp"
+        android:text="Continue with Facebook"
+        android:textAlignment="viewStart"
+        android:textSize="15sp"
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/facebooklogo"
+        app:iconSize="30sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLetsYouIn" />
+
+    <TextView
+        android:id="@+id/textOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="or"
+        android:textColor="#FAF6F6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInAppleButton" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#35383F"
+        app:layout_constraintBottom_toBottomOf="@+id/textOr"
+        app:layout_constraintEnd_toStartOf="@+id/textOr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textOr" />
+
+    <View
+        android:id="@+id/dvider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="#35383F"
+        app:layout_constraintBottom_toBottomOf="@+id/textOr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textOr"
+        app:layout_constraintTop_toTopOf="@+id/textOr" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SigninButton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/red"
+        android:text="Sign in with password"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOr" />
+
+    <TextView
+        android:id="@+id/textDontAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="35dp"
+        android:text="Don’t have an account?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/SigninButton"
+        app:layout_constraintTop_toBottomOf="@+id/SigninButton" />
+
+    <TextView
+        android:id="@+id/SignUptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="85dp"
+        android:text="Sign up"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@+id/textDontAccount"
+        app:layout_constraintEnd_toEndOf="@+id/SigninButton"
+        app:layout_constraintStart_toEndOf="@+id/textDontAccount"
+        app:layout_constraintTop_toTopOf="@+id/textDontAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

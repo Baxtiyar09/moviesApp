@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".aut.signIn.SignInFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/appleButton"
+        android:layout_width="88dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="45dp"
+        android:paddingLeft="30dp"
+        android:text="."
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/applelogo"
+        app:iconSize="30sp"
+        app:iconTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="@+id/googleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/googleButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/googleButton"
+        android:layout_width="88dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="30dp"
+        android:text="."
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/googleicon"
+        app:iconSize="30sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintEnd_toStartOf="@+id/appleButton"
+        app:layout_constraintStart_toEndOf="@+id/facebookButton"
+        app:layout_constraintTop_toBottomOf="@+id/orText" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/mlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/CreateAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:text="Login to Your Account"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Email"
+        android:textColorHint="#9E9E9E"
+        app:boxBackgroundColor="#1F222A"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CreateAccountText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/movaemailicon"
+            android:drawablePadding="12dp"
+            android:textColor="#9E9E9E"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Password"
+        android:textColorHint="#9E9E9E"
+        app:boxBackgroundColor="#1F222A"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeErrorColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTintMode="screen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/movapasswordicon"
+            android:drawablePadding="12dp"
+            android:password="true"
+            android:textColor="#9E9E9E"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:text="Remember me"
+        android:textColor="@color/white"
+        app:checkedState="unchecked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInbutton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/red"
+        android:text="Sign In"
+        android:textSize="16sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Forgot the password?"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInbutton" />
+
+    <TextView
+        android:id="@+id/orText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="16dp"
+        android:text="or continue with"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="16dp"
+        android:background="#35383F"
+        app:layout_constraintBottom_toBottomOf="@+id/orText"
+        app:layout_constraintEnd_toStartOf="@+id/orText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orText" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="#35383F"
+        app:layout_constraintBottom_toBottomOf="@+id/orText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orText"
+        app:layout_constraintTop_toTopOf="@+id/orText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/facebookButton"
+        android:layout_width="88dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="45dp"
+        android:paddingLeft="30dp"
+        android:text="."
+        app:backgroundTint="#1F222A"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/facebooklogo"
+        app:iconSize="30sp"
+        app:iconTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/googleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/googleButton" />
+
+    <TextView
+        android:id="@+id/dontAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="27dp"
+        android:text="Don’t have an account?"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/facebookButton"
+        app:layout_constraintTop_toBottomOf="@+id/googleButton" />
+
+    <TextView
+        android:id="@+id/signUpKecid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="65dp"
+        android:text="Sign up"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dontAccountText"
+        app:layout_constraintEnd_toEndOf="@+id/appleButton"
+        app:layout_constraintStart_toEndOf="@+id/dontAccountText"
+        app:layout_constraintTop_toTopOf="@+id/dontAccountText" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/movaloading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
