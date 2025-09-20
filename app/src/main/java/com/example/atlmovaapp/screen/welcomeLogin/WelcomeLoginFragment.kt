@@ -25,7 +25,7 @@ class WelcomeLoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.backIcon.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(WelcomeLoginFragmentDirections.actionWelcomeLoginFragmentToOnboardingFragment())
         }
         binding.signInFacebookButton.setOnClickListener {
             findNavController().navigate(WelcomeLoginFragmentDirections.actionWelcomeLoginFragmentToSignInFragment())

@@ -17,7 +17,7 @@ data class MovieDetailResponse(
     @SerializedName("homepage")
     val homepage: String?,
     @SerializedName("id")
-    val id: Int?,
+    val id: Int,
     @SerializedName("imdb_id")
     val imdbİd: String?,
     @SerializedName("origin_country")
@@ -27,7 +27,7 @@ data class MovieDetailResponse(
     @SerializedName("original_title")
     val originalTitle: String?,
     @SerializedName("overview")
-    val overview: String?,
+    val overview: String,
     @SerializedName("popularity")
     val popularity: Double?,
     @SerializedName("poster_path")
@@ -49,11 +49,11 @@ data class MovieDetailResponse(
     @SerializedName("tagline")
     val tagline: String?,
     @SerializedName("title")
-    val title: String?,
+    val title: String,
     @SerializedName("video")
     val video: Boolean?,
     @SerializedName("vote_average")
-    val voteAverage: Double?,
+    val voteAverage: Double,
     @SerializedName("vote_count")
     val voteCount: Int?
 )

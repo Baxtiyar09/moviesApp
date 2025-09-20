@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    tools:context=".screen.profile.download.ProfileDownloadFragment">
+
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:textAllCaps="true"
+        app:trackTint="@color/red"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/WiFiOnlyText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/WiFiOnlyText" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/downloadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+        app:layout_constraintStart_toEndOf="@+id/backIcon"
+        app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+    <ImageView
+        android:id="@+id/wifiIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/movawifiicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/WiFiOnlyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Wi-Fi Only"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/wifiIcon"
+        app:layout_constraintStart_toEndOf="@+id/wifiIcon"
+        app:layout_constraintTop_toTopOf="@+id/wifiIcon" />
+
+    <ImageView
+        android:id="@+id/smarDownloadIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/movasmartdownloadicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiIcon" />
+
+    <TextView
+        android:id="@+id/SmartDownloadsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Smart Downloads"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/smarDownloadIcon"
+        app:layout_constraintStart_toEndOf="@+id/smarDownloadIcon"
+        app:layout_constraintTop_toTopOf="@+id/smarDownloadIcon" />
+
+    <ImageView
+        android:id="@+id/SmartDownloadKecidIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/kecidiconwhite"
+        app:layout_constraintBottom_toBottomOf="@+id/SmartDownloadsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SmartDownloadsText" />
+
+    <ImageView
+        android:id="@+id/videoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/videoqulatyicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smarDownloadIcon" />
+
+    <TextView
+        android:id="@+id/VideoQualityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Video Quality"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/videoIcon"
+        app:layout_constraintStart_toEndOf="@+id/videoIcon"
+        app:layout_constraintTop_toTopOf="@+id/videoIcon" />
+
+    <ImageView
+        android:id="@+id/VideoKecidIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/kecidiconwhite"
+        app:layout_constraintBottom_toBottomOf="@+id/VideoQualityText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/VideoQualityText" />
+
+    <ImageView
+        android:id="@+id/audioIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/movaaudioicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoIcon" />
+
+    <TextView
+        android:id="@+id/AudioQualityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Audio Quality"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/audioIcon"
+        app:layout_constraintStart_toEndOf="@+id/audioIcon"
+        app:layout_constraintTop_toTopOf="@+id/audioIcon" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/kecidiconwhite"
+        app:layout_constraintBottom_toBottomOf="@+id/AudioQualityText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AudioQualityText" />
+
+    <ImageView
+        android:id="@+id/deleteAllDownloadsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/movadeleteicon1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audioIcon" />
+
+    <TextView
+        android:id="@+id/DeleteAllDownloadsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Delete All Downloads"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteAllDownloadsIcon"
+        app:layout_constraintStart_toEndOf="@+id/deleteAllDownloadsIcon"
+        app:layout_constraintTop_toTopOf="@+id/deleteAllDownloadsIcon" />
+
+    <ImageView
+        android:id="@+id/deleteCacheIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/movadeleteicon1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteAllDownloadsIcon" />
+
+    <TextView
+        android:id="@+id/DeleteCacheText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Delete Cache"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteCacheIcon"
+        app:layout_constraintStart_toEndOf="@+id/deleteCacheIcon"
+        app:layout_constraintTop_toTopOf="@+id/deleteCacheIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

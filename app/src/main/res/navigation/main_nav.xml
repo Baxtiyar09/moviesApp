@@ -41,6 +41,12 @@
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notficationFragment2"
+            app:destination="@id/notficationFragment2" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -78,6 +84,9 @@
         <action
             android:id="@+id/action_welcomeLoginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_welcomeLoginFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
     </fragment>
     <fragment
         android:id="@+id/seeAllFragment"
@@ -99,6 +108,12 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_self"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -113,5 +128,152 @@
         android:id="@+id/profileFragment"
         android:name="com.example.atlmovaapp.screen.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_subscribePremiumFragment"
+            app:destination="@id/subscribePremiumFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_notficationFragment"
+            app:destination="@id/notficationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileDownloadFragment"
+            app:destination="@id/profileDownloadFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_securityFragment"
+            app:destination="@id/securityFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_helpCenterFragment"
+            app:destination="@id/helpCenterFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.example.atlmovaapp.screen.myList.MyListFragment"
+        android:label="fragment_my_list"
+        tools:layout="@layout/fragment_my_list" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_myListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.atlmovaapp.screen.download.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" >
+        <action
+            android:id="@+id/action_downloadFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscribePremiumFragment"
+        android:name="com.example.atlmovaapp.screen.profile.join_Premium.subscribe.SubscribePremiumFragment"
+        android:label="fragment_subscribe_premium"
+        tools:layout="@layout/fragment_subscribe_premium" >
+        <action
+            android:id="@+id/action_subscribePremiumFragment_to_selectCardFragment"
+            app:destination="@id/selectCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectCardFragment"
+        android:name="com.example.atlmovaapp.screen.profile.join_Premium.selectCard.SelectCardFragment"
+        android:label="fragment_select_card"
+        tools:layout="@layout/fragment_select_card" >
+        <action
+            android:id="@+id/action_selectCardFragment_to_addNewCardFragment"
+            app:destination="@id/addNewCardFragment" />
+        <action
+            android:id="@+id/action_selectCardFragment_to_reviewSummaryCardFragment"
+            app:destination="@id/reviewSummaryCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewCardFragment"
+        android:name="com.example.atlmovaapp.screen.profile.join_Premium.addCard.AddNewCardFragment"
+        android:label="fragment_add_new_card"
+        tools:layout="@layout/fragment_add_new_card" >
+        <action
+            android:id="@+id/action_addNewCardFragment_to_selectCardFragment"
+            app:destination="@id/selectCardFragment"
+            app:popUpTo="@id/addNewCardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewSummaryCardFragment"
+        android:name="com.example.atlmovaapp.screen.profile.join_Premium.reviewCard.ReviewSummaryCardFragment"
+        android:label="ReviewSummaryCardFragment"
+        tools:layout="@layout/fragment_review_summary_card" >
+        <action
+            android:id="@+id/action_reviewSummaryCardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="cardNumber"
+            app:argType="string"
+            android:defaultValue=""/>
+
+        <argument
+            android:name="cardName"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="cardImageRes"
+            app:argType="integer"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.atlmovaapp.screen.profile.edit_Profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/notficationFragment"
+        android:name="com.example.atlmovaapp.screen.profile.notfication.NotficationFragment"
+        android:label="fragment_notfication"
+        tools:layout="@layout/fragment_notfication" />
+    <fragment
+        android:id="@+id/profileDownloadFragment"
+        android:name="com.example.atlmovaapp.screen.profile.download.ProfileDownloadFragment"
+        android:label="fragment_profile_download"
+        tools:layout="@layout/fragment_profile_download" />
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.example.atlmovaapp.screen.profile.security.SecurityFragment"
+        android:label="fragment_security"
+        tools:layout="@layout/fragment_security" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.example.atlmovaapp.screen.profile.language.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.example.atlmovaapp.screen.profile.privacy_policy.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/helpCenterFragment"
+        android:name="com.example.atlmovaapp.screen.profile.help_center.HelpCenterFragment"
+        android:label="fragment_help_center"
+        tools:layout="@layout/fragment_help_center" />
+    <fragment
+        android:id="@+id/notficationFragment2"
+        android:name="com.example.atlmovaapp.screen.notification.NotficationFragment"
+        android:label="fragment_notfication2"
+        tools:layout="@layout/fragment_notfication2" >
+        <action
+            android:id="@+id/action_notficationFragment2_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>

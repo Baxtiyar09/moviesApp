@@ -69,7 +69,7 @@ class SignInFragment : Fragment() {
         }
     }
 
-    fun translation(){
+    fun translation() {
         binding.signUpKecid.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment())
         }

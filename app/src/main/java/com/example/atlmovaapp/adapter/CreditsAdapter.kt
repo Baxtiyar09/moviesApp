@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.atlmovaapp.databinding.ItemCreditsBinding
 import com.example.atlmovaapp.model.detail.flimCredits.Cast
 
-class CreditsAdapter : RecyclerView.Adapter<CreditsAdapter.CreditsViewHolder>(){
+class CreditsAdapter : RecyclerView.Adapter<CreditsAdapter.CreditsViewHolder>() {
     val credits = arrayListOf<Cast>()
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): CreditsViewHolder {
-        val view = ItemCreditsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val view = ItemCreditsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CreditsViewHolder(view)
     }
 
@@ -28,7 +28,7 @@ class CreditsAdapter : RecyclerView.Adapter<CreditsAdapter.CreditsViewHolder>(){
         return credits.size
     }
 
-    fun updateCredits(newCredits: List<Cast>){
+    fun updateCredits(newCredits: List<Cast>) {
         credits.clear()
         credits.addAll(newCredits)
         notifyDataSetChanged()

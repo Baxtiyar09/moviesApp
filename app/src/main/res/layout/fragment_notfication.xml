@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    tools:context=".screen.profile.notfication.NotficationFragment">
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="false"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/SubscriptionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SubscriptionText" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/AppUpdatesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AppUpdatesText" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/NewReleasesMovieText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NewReleasesMovieText" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="false"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/NewServicesAvailableText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NewServicesAvailableText" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="false"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/NewArrivalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NewArrivalText" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:checked="true"
+        android:textAllCaps="true"
+        app:trackTint="@color/swicth_color"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/GeneralNotificationText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GeneralNotificationText" />
+
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/backicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notficationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Notfication"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backIcon"
+        app:layout_constraintStart_toEndOf="@+id/backIcon"
+        app:layout_constraintTop_toTopOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/GeneralNotificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:text="General Notification"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIcon" />
+
+    <TextView
+        android:id="@+id/NewArrivalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="New Arrival"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GeneralNotificationText" />
+
+    <TextView
+        android:id="@+id/NewServicesAvailableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="New Services Available"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewArrivalText" />
+
+    <TextView
+        android:id="@+id/NewReleasesMovieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="New Releases Movie"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewServicesAvailableText" />
+
+    <TextView
+        android:id="@+id/AppUpdatesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="App Updates"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewReleasesMovieText" />
+
+    <TextView
+        android:id="@+id/SubscriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Subscription"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppUpdatesText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

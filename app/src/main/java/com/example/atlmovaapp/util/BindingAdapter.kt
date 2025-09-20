@@ -3,7 +3,11 @@ package com.example.atlmovaapp.util
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
-import com.example.atlmovaapp.R
+
+@BindingAdapter("load_image")
+fun loadImage(imageView: ImageView, imageResource: Int) {
+    imageView.setImageResource(imageResource)
+}
 
 
 @BindingAdapter("load_image_resource")

@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.atlmovaapp.databinding.ItemReviewsBinding
 import com.example.atlmovaapp.model.detail.reviews.ResultReviews
 
-class ReviewAdapter : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>(){
+class ReviewAdapter : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>() {
     val reviews = arrayListOf<ResultReviews>()
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ReviewViewHolder {
-        val view = ItemReviewsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val view = ItemReviewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ReviewViewHolder(view)
     }
 
@@ -27,10 +27,10 @@ class ReviewAdapter : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-       return reviews.size
+        return reviews.size
     }
 
-    fun updateList(newList: List<ResultReviews>){
+    fun updateList(newList: List<ResultReviews>) {
         reviews.clear()
         reviews.addAll(newList)
         notifyDataSetChanged()

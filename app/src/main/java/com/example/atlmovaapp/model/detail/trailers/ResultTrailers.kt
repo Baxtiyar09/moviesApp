@@ -12,11 +12,11 @@ data class ResultTrailers(
     @SerializedName("iso_639_1")
     val iso6391: String?,
     @SerializedName("key")
-    val key: String?,
+    val key: String,
     @SerializedName("name")
     val name: String?,
     @SerializedName("official")
-    val official: Boolean?,
+    val official: Boolean,
     @SerializedName("published_at")
     val publishedAt: String?,
     @SerializedName("site")
@@ -25,7 +25,7 @@ data class ResultTrailers(
     val size: Int?,
     @SerializedName("type")
     val type: String?
-){
+) {
     val thumbnailUrl: String
         get() = "https://img.youtube.com/vi/${R.attr.key}/0.jpg"
 }

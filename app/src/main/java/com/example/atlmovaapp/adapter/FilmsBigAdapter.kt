@@ -6,15 +6,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.atlmovaapp.databinding.ItemFilmsBigBinding
 import com.example.atlmovaapp.model.Result
 
-class FilmsBigAdapter : RecyclerView.Adapter<FilmsBigAdapter.FilmsBigViewHolder>(){
+class FilmsBigAdapter(
+    private val onItemClick: (Int) -> Unit
+) : RecyclerView.Adapter<FilmsBigAdapter.FilmsBigViewHolder>() {
 
     val flims = arrayListOf<Result>()
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): FilmsBigViewHolder {
-        val view = ItemFilmsBigBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val view = ItemFilmsBigBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FilmsBigViewHolder(view)
     }
 
@@ -22,19 +25,27 @@ class FilmsBigAdapter : RecyclerView.Adapter<FilmsBigAdapter.FilmsBigViewHolder>
         holder: FilmsBigViewHolder,
         position: Int
     ) {
-       val item = flims[position]
+        val item = flims[position]
         holder.itemFlimsBigBinding.film = item
+
+        holder.itemFlimsBigBinding.root.setOnClickListener {
+            item.id?.let {
+                onItemClick(item.id)
+            }
+        }
+
     }
 
     override fun getItemCount(): Int {
         return flims.size
     }
 
-    fun updateList(newList: List<Result>){
+    fun updateList(newList: List<Result>) {
         flims.clear()
         flims.addAll(newList)
         notifyDataSetChanged()
     }
+
 
     class FilmsBigViewHolder(val itemFlimsBigBinding: ItemFilmsBigBinding) :
         RecyclerView.ViewHolder(itemFlimsBigBinding.root)

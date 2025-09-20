@@ -6,7 +6,7 @@
 <data>
     <variable
         name="onboardingWords"
-        type="String" />
+        type="com.example.atlmovaapp.model.onboarding.OnboardinPagerModel" />
 </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="26dp"
-        android:text="@{onboardingWords}"
+        android:text="@{onboardingWords.basliq}"
         android:textAlignment="center"
         android:textColor="#FAF7F7"
         android:textSize="35sp"
@@ -36,7 +36,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="@{onboardingWords}"
+        android:text="@{onboardingWords.info}"
         android:textAlignment="center"
         android:textColor="#FBFAFA"
         android:textSize="16sp"

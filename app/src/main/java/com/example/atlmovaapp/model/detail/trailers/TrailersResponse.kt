@@ -7,5 +7,5 @@ data class TrailersResponse(
     @SerializedName("id")
     val id: Int?,
     @SerializedName("results")
-    val results: List<ResultTrailers>
+    val results: List<ResultTrailers> = listOf()
 )

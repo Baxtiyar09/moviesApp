@@ -1,10 +1,8 @@
 package com.example.atlmovaapp.screen.serach
 
-import android.R.attr.id
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.atlmovaapp.model.Result
 import com.example.atlmovaapp.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,7 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SerachViewModel @Inject constructor(
     val repository: AppRepository
-): ViewModel() {
+) : ViewModel() {
     val allMovies = MutableLiveData<List<Result>>()
     val serachMovies = MutableLiveData<List<Result>>()
     val error = MutableLiveData<String>()
@@ -23,14 +21,14 @@ class SerachViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.search(title).collect { response ->
-                    if (response.isSuccessful){
+                    if (response.isSuccessful) {
                         response.body()?.results?.let {
                             serachMovies.value = it
                         }
                     }
                 }
 
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 error.value = e.localizedMessage
             }
         }
@@ -53,7 +51,6 @@ class SerachViewModel @Inject constructor(
             }
         }
     }
-
 
 
 }

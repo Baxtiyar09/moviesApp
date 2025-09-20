@@ -9,11 +9,14 @@
     <item
         android:id="@+id/searchFragment"
         android:icon="@drawable/movaexplorebottomicon"
-        android:title="Explore" />
+        android:title="Explore"
+        />
     <item
+        android:id="@+id/myListFragment"
         android:icon="@drawable/movakaydbottomicon"
         android:title="My List" />
     <item
+        android:id="@+id/downloadFragment"
         android:icon="@drawable/movadownloadbottomicon"
         android:title="Download" />
     <item

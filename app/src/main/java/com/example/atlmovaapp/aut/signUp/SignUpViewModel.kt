@@ -12,23 +12,23 @@ import kotlinx.coroutines.tasks.await
 @HiltViewModel
 class SignUpViewModel @Inject constructor(
     val firebaseAuth: FirebaseAuth
-) : ViewModel(){
+) : ViewModel() {
     val isSucces = MutableLiveData<Boolean>()
     val error = MutableLiveData<String>()
     val loading = MutableLiveData<Boolean>()
 
-    fun signUp(email: String, password: String){
+    fun signUp(email: String, password: String) {
         loading.value = true
         viewModelScope.launch {
             try {
-                val  response = firebaseAuth.createUserWithEmailAndPassword(email,password).await()
-                if (!response.user?.uid.isNullOrEmpty()){
+                val response = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
+                if (!response.user?.uid.isNullOrEmpty()) {
                     isSucces.value = true
-                }else{
+                } else {
                     error.value = "Error"
                     loading.value = false
                 }
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 loading.value = false
                 error.value = e.localizedMessage
             }

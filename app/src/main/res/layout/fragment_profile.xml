@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
     tools:context=".screen.profile.ProfileFragment">
 
     <ImageView
@@ -62,7 +69,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/black"
+        app:cardBackgroundColor="@color/appColor"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:text="Join Premium!"
                 android:textColor="#DB0505"
                 android:textSize="20sp"
@@ -100,11 +107,11 @@
 
             <TextView
                 android:id="@+id/textViewMellumat"
-                android:layout_width="250dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
                 android:text="Enjoy watching Full-HD movies, without restrictions and without ads"
                 android:textColor="#CFC7C7"
                 android:textSize="10sp"
@@ -125,18 +132,28 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/profileicon1"
+    <View
+        android:id="@+id/EditProfileView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
 
+    <ImageView
+        android:id="@+id/editProfileIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/profileicon1"
+        app:layout_constraintBottom_toBottomOf="@+id/EditProfileView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EditProfileView" />
+
     <TextView
-        android:id="@+id/qiymetMonth"
+        android:id="@+id/editProfileText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -144,32 +161,41 @@
         android:textColor="#F4EAEA"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
-        app:layout_constraintStart_toEndOf="@+id/imageView20"
-        app:layout_constraintTop_toTopOf="@+id/imageView20" />
+        app:layout_constraintBottom_toBottomOf="@+id/editProfileIcon"
+        app:layout_constraintStart_toEndOf="@+id/editProfileIcon"
+        app:layout_constraintTop_toTopOf="@+id/editProfileIcon" />
 
     <ImageView
-        android:id="@+id/imageView21"
+        android:id="@+id/editProfileKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/qiymetMonth"
+        app:layout_constraintBottom_toBottomOf="@+id/editProfileText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/qiymetMonth" />
+        app:layout_constraintTop_toTopOf="@+id/editProfileText" />
+
+    <View
+        android:id="@+id/NoficationView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditProfileView" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/notficationIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/notifacionicon"
+        app:layout_constraintBottom_toBottomOf="@+id/NoficationView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+        app:layout_constraintTop_toTopOf="@+id/NoficationView" />
 
     <TextView
-        android:id="@+id/textViewdollaryazi"
+        android:id="@+id/NotficationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -177,32 +203,41 @@
         android:textColor="#EBE7E7"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
-        app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toTopOf="@+id/imageView22" />
+        app:layout_constraintBottom_toBottomOf="@+id/notficationIcon"
+        app:layout_constraintStart_toEndOf="@+id/notficationIcon"
+        app:layout_constraintTop_toTopOf="@+id/notficationIcon" />
 
     <ImageView
-        android:id="@+id/imageViewNotification"
+        android:id="@+id/notificationKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewdollaryazi"
+        app:layout_constraintBottom_toBottomOf="@+id/NotficationText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewdollaryazi" />
+        app:layout_constraintTop_toTopOf="@+id/NotficationText" />
+
+    <View
+        android:id="@+id/DownloadView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoficationView" />
 
     <ImageView
-        android:id="@+id/imageViewtrue3"
+        android:id="@+id/downloadIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/downloadicon2"
+        app:layout_constraintBottom_toBottomOf="@+id/DownloadView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+        app:layout_constraintTop_toTopOf="@+id/DownloadView" />
 
     <TextView
-        android:id="@+id/textViewSubscribe"
+        android:id="@+id/DownloadText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -210,31 +245,40 @@
         android:textColor="#FAF4F4"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewtrue3"
-        app:layout_constraintStart_toEndOf="@+id/imageViewtrue3"
-        app:layout_constraintTop_toTopOf="@+id/imageViewtrue3" />
+        app:layout_constraintBottom_toBottomOf="@+id/downloadIcon"
+        app:layout_constraintStart_toEndOf="@+id/downloadIcon"
+        app:layout_constraintTop_toTopOf="@+id/downloadIcon" />
 
     <ImageView
-        android:id="@+id/imageViewDownload"
+        android:id="@+id/DownloadKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewSubscribe" />
+        app:layout_constraintTop_toTopOf="@+id/DownloadText" />
+
+    <View
+        android:id="@+id/SecurityView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DownloadView" />
 
     <ImageView
-        android:id="@+id/imageView24"
+        android:id="@+id/securityIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/securityicon"
+        app:layout_constraintBottom_toBottomOf="@+id/SecurityView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewtrue3" />
+        app:layout_constraintTop_toTopOf="@+id/SecurityView" />
 
     <TextView
-        android:id="@+id/textViewtrueyazi"
+        android:id="@+id/SecutriyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -242,32 +286,41 @@
         android:textColor="#EFEDED"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
-        app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toTopOf="@+id/imageView24" />
+        app:layout_constraintBottom_toBottomOf="@+id/securityIcon"
+        app:layout_constraintStart_toEndOf="@+id/securityIcon"
+        app:layout_constraintTop_toTopOf="@+id/securityIcon" />
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/SecurityKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewtrueyazi"
+        app:layout_constraintBottom_toBottomOf="@+id/SecutriyText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewtrueyazi" />
+        app:layout_constraintTop_toTopOf="@+id/SecutriyText" />
+
+    <View
+        android:id="@+id/LanguageView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SecurityView" />
 
     <ImageView
-        android:id="@+id/imageView26"
+        android:id="@+id/LanguageIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/language"
+        app:layout_constraintBottom_toBottomOf="@+id/LanguageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+        app:layout_constraintTop_toTopOf="@+id/LanguageView" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/LanguageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -275,32 +328,55 @@
         android:textColor="#F3EEEE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
-        app:layout_constraintStart_toEndOf="@+id/imageView26"
-        app:layout_constraintTop_toTopOf="@+id/imageView26" />
+        app:layout_constraintBottom_toBottomOf="@+id/LanguageIcon"
+        app:layout_constraintStart_toEndOf="@+id/LanguageIcon"
+        app:layout_constraintTop_toTopOf="@+id/LanguageIcon" />
 
     <ImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/LanguageKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintBottom_toBottomOf="@+id/LanguageText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
+        app:layout_constraintTop_toTopOf="@+id/LanguageText" />
+
+    <View
+        android:id="@+id/DarkModeView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LanguageView" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:checked="true"
+        android:textAllCaps="true"
+        app:trackTint="@color/red"
+        app:thumbTint="@color/white"
+        app:trackDecorationTint="@color/appColor"
+        app:layout_constraintBottom_toBottomOf="@+id/DarkModeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DarkModeText" />
 
     <ImageView
-        android:id="@+id/imageView28"
+        android:id="@+id/DarkModeIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/gozicon"
+        app:layout_constraintBottom_toBottomOf="@+id/DarkModeView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+        app:layout_constraintTop_toTopOf="@+id/DarkModeView" />
 
     <TextView
-        android:id="@+id/textViewtrue3yazi"
+        android:id="@+id/DarkModeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -308,12 +384,12 @@
         android:textColor="#FFF7F7"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView28"
-        app:layout_constraintStart_toEndOf="@+id/imageView28"
-        app:layout_constraintTop_toTopOf="@+id/imageView28" />
+        app:layout_constraintBottom_toBottomOf="@+id/DarkModeIcon"
+        app:layout_constraintStart_toEndOf="@+id/DarkModeIcon"
+        app:layout_constraintTop_toTopOf="@+id/DarkModeIcon" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/EnglishUsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -321,32 +397,31 @@
         android:textColor="#F4F0F0"
         android:textSize="19sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        app:layout_constraintEnd_toStartOf="@+id/imageView27"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
+        app:layout_constraintBottom_toBottomOf="@+id/LanguageText"
+        app:layout_constraintEnd_toStartOf="@+id/LanguageKecidIcon"
+        app:layout_constraintTop_toTopOf="@+id/LanguageText" />
 
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewtrue3yazi"
+    <View
+        android:id="@+id/HelpCenterView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewtrue3yazi" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DarkModeView" />
 
     <ImageView
-        android:id="@+id/imageView30"
+        android:id="@+id/HelpCenterIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
         android:src="@drawable/infoicon"
+        app:layout_constraintBottom_toBottomOf="@+id/HelpCenterView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+        app:layout_constraintTop_toTopOf="@+id/HelpCenterView" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/HelpCenterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -354,59 +429,70 @@
         android:textColor="#F6F2F2"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView30"
-        app:layout_constraintStart_toEndOf="@+id/imageView30"
-        app:layout_constraintTop_toTopOf="@+id/imageView30" />
+        app:layout_constraintBottom_toBottomOf="@+id/HelpCenterIcon"
+        app:layout_constraintStart_toEndOf="@+id/HelpCenterIcon"
+        app:layout_constraintTop_toTopOf="@+id/HelpCenterIcon" />
 
     <ImageView
-        android:id="@+id/imageView31"
+        android:id="@+id/HelpCenterKecidIcon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintBottom_toBottomOf="@+id/HelpCenterText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView19" />
+        app:layout_constraintTop_toTopOf="@+id/HelpCenterText" />
+
+    <View
+        android:id="@+id/PrivacyPolicyView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HelpCenterView" />
 
     <ImageView
-        android:id="@+id/imageView33"
+        android:id="@+id/switchIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
-        android:src="@drawable/yonicon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+        android:src="@drawable/privacypolicyicon"
+        app:layout_constraintBottom_toBottomOf="@+id/PrivacyPolicyView"
+        app:layout_constraintStart_toStartOf="@+id/PrivacyPolicyView"
+        app:layout_constraintTop_toTopOf="@+id/PrivacyPolicyView" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/PrivacyPolicyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="Switch"
+        android:text="Privacy Policy"
         android:textColor="#FFF7F7"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView33"
-        app:layout_constraintStart_toEndOf="@+id/imageView33"
-        app:layout_constraintTop_toTopOf="@+id/imageView33" />
+        app:layout_constraintBottom_toBottomOf="@+id/switchIcon"
+        app:layout_constraintStart_toEndOf="@+id/switchIcon"
+        app:layout_constraintTop_toTopOf="@+id/switchIcon" />
 
     <ImageView
-        android:id="@+id/imageView34"
+        android:id="@+id/switchKecid"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintBottom_toBottomOf="@+id/PrivacyPolicyText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView20" />
+        app:layout_constraintTop_toTopOf="@+id/PrivacyPolicyText" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:cardCornerRadius="30dp"
+        app:cardCornerRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -418,8 +504,8 @@
 
             <ImageView
                 android:id="@+id/myProfileImage"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/myimage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -427,4 +513,28 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/editIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/appColor"
+        android:src="@drawable/editicon1"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/logAutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:srcCompat="@drawable/log_out" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

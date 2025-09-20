@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191818"
+    android:background="@color/appColor"
     tools:context=".screen.serach.SearchFragment" >
 
     <ImageView
@@ -34,6 +34,8 @@
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
         app:boxStrokeWidth="0dp"
+        app:boxStrokeColor="@color/red"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toStartOf="@+id/materialCardView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -81,15 +83,16 @@
         android:id="@+id/rvSearch"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="5dp"
+        android:visibility="visible"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:spanCount="2" />
 
     <TextView
         android:id="@+id/notFaoundText"
@@ -122,4 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notFaoundText" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

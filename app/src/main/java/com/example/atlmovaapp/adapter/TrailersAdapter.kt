@@ -6,8 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.atlmovaapp.databinding.ItemTrailersBinding
 import com.example.atlmovaapp.model.detail.trailers.ResultTrailers
 
-class TrailersAdapter : RecyclerView.Adapter<TrailersAdapter.TrailersViewHolder>(){
+class TrailersAdapter : RecyclerView.Adapter<TrailersAdapter.TrailersViewHolder>() {
+
+    lateinit var onItemClick: (ResultTrailers) -> Unit
+
     val trailers = arrayListOf<ResultTrailers>()
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,13 +26,17 @@ class TrailersAdapter : RecyclerView.Adapter<TrailersAdapter.TrailersViewHolder>
     ) {
         val item = trailers[position]
         holder.itemTrailersBinding.trailer = item
+
+        holder.itemTrailersBinding.trailerCard.setOnClickListener {
+            onItemClick.invoke(item)
+        }
     }
 
     override fun getItemCount(): Int {
-       return trailers.size
+        return trailers.size
     }
 
-    fun updateTrailers(newTrailers: List<ResultTrailers>){
+    fun updateTrailers(newTrailers: List<ResultTrailers>) {
         trailers.clear()
         trailers.addAll(newTrailers)
         notifyDataSetChanged()

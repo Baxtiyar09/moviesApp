@@ -18,7 +18,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191818"
+    android:background="@color/appColor"
     tools:context=".screen.detail.DetailFragment">
 
     <com.google.android.material.button.MaterialButton
@@ -108,7 +108,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:maxLength="3"
-        android:text="@{detail.voteAverage.toString()}"
+        android:text="@{String.valueOf(detail.voteAverage)}"
         app:layout_constraintBottom_toBottomOf="@+id/ratingUlduzIcon"
         app:layout_constraintStart_toEndOf="@+id/ratingUlduzIcon"
         app:layout_constraintTop_toTopOf="@+id/ratingUlduzIcon" />
@@ -266,9 +266,9 @@
         android:id="@+id/rv_Trailers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="24dp"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -281,9 +281,9 @@
         android:id="@+id/rv_MoreLikeThis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="24dp"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
@@ -297,9 +297,9 @@
         android:id="@+id/rv_Comment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="24dp"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -307,6 +307,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimationView"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/downloadloadinganimation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

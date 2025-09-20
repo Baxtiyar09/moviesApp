@@ -15,19 +15,22 @@ fun View.gone() {
 fun View.invisible() {
     this.visibility = View.INVISIBLE
 }
-fun ImageView.loadImageUrl(url: String?){
+
+fun ImageView.loadImageUrl(url: String?) {
     url?.let {
-        val fullUrl ="https://image.tmdb.org/t/p/original" + it
+        val fullUrl = "https://image.tmdb.org/t/p/original" + it
         Glide.with(this.context)
             .load(fullUrl)
             .into(this)
     }
 }
-fun ImageView.loadImageYoutube(key: String?){
+
+fun ImageView.loadImageYoutube(key: String?) {
     key?.let {
-        val youtubeUrl = "https://img.youtube.com/vi/"+it+"/hqdefault.jpg"
+        val youtubeUrl = "https://img.youtube.com/vi/" + it + "/hqdefault.jpg"
         Glide.with(this.context)
             .load(youtubeUrl)
             .into(this)
     }
 }
+

@@ -1,6 +1,5 @@
 package com.example.atlmovaapp.adapter
 
-import android.graphics.Movie
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +8,7 @@ import com.example.atlmovaapp.model.Result
 
 class FilmsAdapter(
     private val onItemClick: (Int) -> Unit
-): RecyclerView.Adapter<FilmsAdapter.FilmsViewHolder>() {
+) : RecyclerView.Adapter<FilmsAdapter.FilmsViewHolder>() {
 
     val flims = arrayListOf<Result>()
 
@@ -17,7 +16,7 @@ class FilmsAdapter(
         parent: ViewGroup,
         viewType: Int
     ): FilmsViewHolder {
-        val view = ItemFilmsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val view = ItemFilmsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FilmsViewHolder(view)
     }
 

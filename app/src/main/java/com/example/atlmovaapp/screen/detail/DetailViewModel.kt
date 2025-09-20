@@ -1,5 +1,6 @@
 package com.example.atlmovaapp.screen.detail
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,7 +11,9 @@ import com.example.atlmovaapp.model.detail.reviews.ResultReviews
 import com.example.atlmovaapp.model.detail.trailers.ResultTrailers
 import com.example.atlmovaapp.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -87,7 +90,7 @@ class DetailViewModel @Inject constructor(
         loading.value = true
         viewModelScope.launch {
             try {
-                repository.getPopularFlow().collect { response ->
+                repository.getUpcomingFlow().collect { response ->
                     if (response.isSuccessful) {
                         response.body()?.let {
                             loading.value = false
@@ -108,8 +111,11 @@ class DetailViewModel @Inject constructor(
                 repository.getMovieReviewsFlow(id).collect { response ->
                     if (response.isSuccessful) {
                         response.body()?.results?.let {
-                            loading.value = false
-                            reviews.value = it
+                            withContext(Dispatchers.Main) {
+                                loading.value = false
+                                reviews.value = it
+                                Log.d("reviews", it.toString())
+                            }
                         }
                     }
                 }
@@ -120,4 +126,8 @@ class DetailViewModel @Inject constructor(
         }
     }
 
+
+    suspend fun isMovieAdded(id: Int): Boolean {
+        return repository.isMovieAdded(id)
+    }
 }

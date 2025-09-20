@@ -13,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     val repository: AppRepository
-) : ViewModel()  {
+) : ViewModel() {
     val error = MutableLiveData<String>()
     val loading = MutableLiveData<Boolean>()
     val popular = MutableLiveData<List<Result>>()
@@ -23,58 +23,38 @@ class HomeViewModel @Inject constructor(
     private val _featuredMovie = MutableLiveData<Result?>()
     val featuredMovie: MutableLiveData<Result?> get() = _featuredMovie
 
-    fun getPopular(){
+    fun getPopular() {
         loading.value = true
         viewModelScope.launch {
             try {
-                repository.getPopularFlow().collect{ response ->
-                    if (response.isSuccessful){
-                       response.body()?.let {
-                           loading.value = false
-                           popular.value = it.results ?: emptyList()
-                       }
-                    }
-                }
-            }catch (e:Exception) {
-                loading.value = false
-                error.value = e.localizedMessage
-            }
-        }
-    }
-
-    fun getTopRated(){
-        loading.value = true
-        viewModelScope.launch {
-            try {
-                repository.getTopRatedFlow().collect{ response ->
-                    if (response.isSuccessful){
+                repository.getPopularFlow().collect { response ->
+                    if (response.isSuccessful) {
                         response.body()?.let {
                             loading.value = false
-                            topRated.value = it.results ?: emptyList()
+                            popular.value = it.results.take(5) ?: emptyList()
                         }
                     }
                 }
-            }catch (e:Exception) {
+            } catch (e: Exception) {
                 loading.value = false
                 error.value = e.localizedMessage
             }
         }
     }
 
-
-    fun getUpcoming(){
+    fun getTopRated() {
         loading.value = true
         viewModelScope.launch {
             try {
-                repository.getUpcomingFlow().collect{ response ->
-                    if (response.isSuccessful){
+                repository.getTopRatedFlow().collect { response ->
+                    if (response.isSuccessful) {
                         response.body()?.let {
                             loading.value = false
-                            upcoming.value = it.results ?: emptyList()
+                            topRated.value = it.results.take(7) ?: emptyList()
                         }
                     }
                 }
-            }catch (e:Exception) {
+            } catch (e: Exception) {
                 loading.value = false
                 error.value = e.localizedMessage
             }
@@ -82,25 +62,44 @@ class HomeViewModel @Inject constructor(
     }
 
 
-    fun getNowPlaying(){
+    fun getUpcoming() {
         loading.value = true
         viewModelScope.launch {
             try {
-                repository.getNowPlayingFlow().collect{ response ->
-                    if (response.isSuccessful){
+                repository.getUpcomingFlow().collect { response ->
+                    if (response.isSuccessful) {
                         response.body()?.let {
                             loading.value = false
-                            nowPlaying.value = it.results ?: emptyList()
+                            upcoming.value = it.results.take(7) ?: emptyList()
                         }
                     }
                 }
-            }catch (e:Exception) {
+            } catch (e: Exception) {
                 loading.value = false
                 error.value = e.localizedMessage
             }
         }
     }
 
+
+    fun getNowPlaying() {
+        loading.value = true
+        viewModelScope.launch {
+            try {
+                repository.getNowPlayingFlow().collect { response ->
+                    if (response.isSuccessful) {
+                        response.body()?.let {
+                            loading.value = false
+                            nowPlaying.value = it.results.take(7) ?: emptyList()
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                loading.value = false
+                error.value = e.localizedMessage
+            }
+        }
+    }
 
 
     fun loadFeaturedMovie() {

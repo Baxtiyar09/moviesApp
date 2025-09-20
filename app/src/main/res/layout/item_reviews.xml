@@ -21,27 +21,29 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#221F1F">
+            android:background="@color/appColor">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageViewUser"
                 load_image_resource="@{comment.authorDetails.avatarPath}"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewUser"
-                android:layout_width="0dp"
-                android:layout_height="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="13dp"
                 android:text="@{comment.authorDetails.username}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewUser"
                 app:layout_constraintStart_toEndOf="@+id/imageViewUser"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/imageViewUser" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -73,6 +75,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewComment"
                 app:srcCompat="@drawable/movalikeicon" />

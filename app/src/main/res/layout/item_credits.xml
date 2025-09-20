@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:background="#191818">
+        android:background="@color/appColor">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView"
