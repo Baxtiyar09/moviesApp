@@ -40,6 +40,7 @@
         app:strokeColor="@color/red"
         app:strokeWidth="1dp" />
 
+
     <ImageView
         android:id="@+id/detailFilmImage"
         load_image_resource="@{detail.backdropPath}"
@@ -47,6 +48,7 @@
         android:layout_height="300dp"
         android:clipToOutline="true"
         android:scaleType="centerCrop"
+        android:foreground="#20000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

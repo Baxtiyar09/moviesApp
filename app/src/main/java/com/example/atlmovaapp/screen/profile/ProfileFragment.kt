@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.atlmovaapp.R
 import com.example.atlmovaapp.databinding.FragmentProfileBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
@@ -63,34 +62,26 @@ class ProfileFragment : Fragment() {
         }
 
 
-
     }
 
 
     fun alertDelete() {
-        val dialogView =
-            LayoutInflater.from(requireContext()).inflate(R.layout.delete_alert_dialog, null)
-        val alertDialog = MaterialAlertDialogBuilder(requireContext())
-            .setView(dialogView)
-            .create()
+        val bottomSheet = BottomSheetDialog(requireContext())
+        val bottomSheetView = layoutInflater.inflate(R.layout.log_aut_dialog, null)
+        bottomSheet.setContentView(bottomSheetView)
 
-        val titleTextView = dialogView.findViewById<TextView>(R.id.tvTitle)
-        val messageTextView = dialogView.findViewById<TextView>(R.id.tvMessage)
-        val noButton = dialogView.findViewById<TextView>(R.id.btnNo)
-        val yesButton = dialogView.findViewById<TextView>(R.id.btnYes)
+        val butonCancel = bottomSheetView.findViewById<View>(R.id.btnCancel)
+        val btnLogout = bottomSheetView.findViewById<View>(R.id.btnLogout)
 
-
-        titleTextView.text = "Log out"
-        messageTextView.text = "Are you sure you want to log out?"
-
-        noButton.setOnClickListener {
-            alertDialog.dismiss()
+        butonCancel.setOnClickListener {
+            bottomSheet.dismiss()
         }
-        yesButton.setOnClickListener {
+        btnLogout.setOnClickListener {
+            bottomSheet.dismiss()
             findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToSignInFragment())
-            alertDialog.dismiss()
+
         }
-        alertDialog.show()
+        bottomSheet.show()
 
     }
 }

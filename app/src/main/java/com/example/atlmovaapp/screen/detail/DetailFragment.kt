@@ -203,7 +203,7 @@ class DetailFragment : Fragment() {
 
     private fun showDownloadDialog() {
         val dialogView =
-            LayoutInflater.from(requireContext()).inflate(R.layout.dialog_download, null)
+            LayoutInflater.from(requireContext()).inflate(R.layout.download_dialog, null)
         val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)
         val progressText = dialogView.findViewById<TextView>(R.id.progressText)
         val hideButton = dialogView.findViewById<Button>(R.id.hideButton)

@@ -31,16 +31,22 @@ class OnboardingFragment : Fragment() {
         binding.viewPager.adapter = adapter
         binding.dotsIndicator.setViewPager2(binding.viewPager)
 
-        val list = arrayListOf<OnboardinPagerModel>()
-        list.add(OnboardinPagerModel("Welcome to Mova", "Xos gelmisiniz Mova"))
-        list.add(
-            OnboardinPagerModel(
-                "We are here to help you",
-                "Biz sizə kömək etmək üçün buradayıq"
-            )
-        )
-        list.add(OnboardinPagerModel("Enjoy", "Yeniləyin"))
+        val list = listOf(
 
+            OnboardinPagerModel(
+                "Welcome to Mova",
+                "The best movie streaming app of the century to make your days great!"
+
+            ),
+            OnboardinPagerModel(
+                "Discover Thousands of Movies",
+                "From timeless classics to the latest blockbusters — everything is just a tap away!"
+            ),
+            OnboardinPagerModel(
+                "Watch Anytime Anywhere",
+                "Enjoy seamless streaming on your phone, tablet, or TV entertainment in your pocket."
+            ),
+        )
 
 
         binding.imageView2.setImageResource(R.drawable.movaonboardinimage)

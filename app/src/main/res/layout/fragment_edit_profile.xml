@@ -79,13 +79,16 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Full Name"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
@@ -93,7 +96,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Baxtiyar Alizada"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,13 +106,16 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Nick Name"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameInputLayout">
@@ -118,7 +123,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Baxtiyar "
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,13 +133,16 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Email"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TakmaNameLayout">
@@ -144,10 +151,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/messageicon1"
-            android:text="baxtiyaralizada1@gmail.com"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -157,13 +162,16 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Phone Number"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailLayout">
@@ -171,9 +179,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/moviesecimicon"
-            android:paddingStart="120dp"
-            android:text=" 77 333 98 31"
+            android:paddingStart="130dp"
             android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -183,7 +189,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:textColor="@color/white"
         app:ccp_autoDetectCountry="true"
         app:ccp_contentColor="@color/white"
@@ -196,22 +202,24 @@
         app:layout_constraintTop_toTopOf="@+id/NumberInputLayout" />
 
 
-
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:id="@+id/cinsiyetInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Select Gender"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NumberInputLayout">
@@ -222,25 +230,27 @@
             android:layout_height="wrap_content"
             android:focusable="true"
             android:inputType="none"
-            android:text="Male"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:id="@+id/CitySecimInputLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:hint="Select Country"
+        android:textColorHint="#C2B9B9"
         app:boxBackgroundColor="#2F333E"
         app:boxCornerRadiusBottomEnd="12dp"
         app:boxCornerRadiusBottomStart="12dp"
         app:boxCornerRadiusTopEnd="12dp"
         app:boxCornerRadiusTopStart="12dp"
-        app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cinsiyetInputLayout">
@@ -249,9 +259,8 @@
             android:id="@+id/autoCompleteCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
             android:focusable="true"
-            android:text="United States"
+            android:inputType="none"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -515,18 +515,6 @@
     </com.google.android.material.card.MaterialCardView>
 
     <ImageView
-        android:id="@+id/editIcon2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-25dp"
-        android:layout_marginTop="80dp"
-        android:background="@color/appColor"
-        android:src="@drawable/editicon1"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView" />
-
-    <ImageView
         android:id="@+id/logAutIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -132,15 +132,16 @@
         app:boxCornerRadiusBottomStart="16dp"
         app:boxCornerRadiusTopEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/red"
         app:boxStrokeErrorColor="@color/red"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/red"
         app:hintTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTintMode="screen">
+        app:passwordToggleTint="#9E9E9E"
+        app:passwordToggleTintMode="src_in">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
